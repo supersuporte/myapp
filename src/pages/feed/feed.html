@@ -15,37 +15,36 @@
 
 <ion-content>
     <ion-card>
-
       <ion-item>
         <ion-avatar item-start>
           <img src="../../assets/imgs/card-a01.png">
         </ion-avatar>
-        <h2 class="feed-title">{{ nomeDoUsuario }}</h2>
-        <p>12 de Dezembro de 2017</p>
+        <h2 class="feed-title">{{ objeto_feed.titulo }}</h2>
+        <p>{{ objeto_feed.data }}</p>
       </ion-item>
 
       <img src="../../assets/imgs/card-i01.png">
 
       <ion-card-content>
-        <p>Este é um texto que entra no feed de conteúdo do aplicativo, que deverá vir de um objeto json do webservices. Obrigado de nada.</p>
+        <p>{{ objeto_feed.descricao }}</p>
       </ion-card-content>
 
       <ion-row>
         <ion-col>
           <button ion-button icon-left clear small>
             <ion-icon name="thumbs-up"></ion-icon>
-            <div>12 Likes</div>
+            <div>{{ objeto_feed.qtd_likes }}</div>
           </button>
         </ion-col>
         <ion-col>
           <button ion-button icon-left clear small>
             <ion-icon name="text"></ion-icon>
-            <div>4 Comments</div>
+            <div>{{ objeto_feed.qtd_comments }}</div>
           </button>
         </ion-col>
         <ion-col center text-center>
           <ion-note>
-            11h atrás
+            {{ objeto_feed.time_comments }}
           </ion-note>
         </ion-col>
       </ion-row>
